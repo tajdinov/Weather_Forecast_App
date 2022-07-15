@@ -29,3 +29,18 @@ img {
 
 }
 
+/* style for UV index */
+.low {
+  color: rgb(17, 230, 70);
+  font-size: larger;
+}
+
+.normal {
+  color: rgb(255, 225, 0);
+  font-size: larger;
+}
+
+.high {
+  color: red;
+  font-size: larger;
+}

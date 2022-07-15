@@ -20,9 +20,9 @@ searchButton.click(function () {
     var searchInput = $(".searchInput").val();
 
     // Variable for current weather working 
-    var urlCurrent = "https://api.openweathermap.org/data/2.5/weather?q=" + searchInput + "&Appid=" + apiKey + "&units=imperial";
+    var urlCurrent = "https://api.openweathermap.org/data/2.5/weather?q=" + searchInput + "&Appid=" + apiKey + "&units=metric";
     // Variable for 5 day forecast working
-    var urlFiveDay = "https://api.openweathermap.org/data/2.5/forecast?q=" + searchInput + "&Appid=" + apiKey + "&units=imperial";
+    var urlFiveDay = "https://api.openweathermap.org/data/2.5/forecast?q=" + searchInput + "&Appid=" + apiKey + "&units=metric";
 
 
     if (searchInput == "") {
@@ -70,11 +70,22 @@ searchButton.click(function () {
                 method: "GET"
             }).then(function (response) {
 
-                var currentUV = currentTemp.append("<p>" + "UV Index: " + response.value + "</p>").addClass("card-text");
-                currentUV.addClass("UV");
-                currentTemp.append(currentUV);
-                // currentUV.append("UV Index: " + response.value);
-            });
+                var currentUV = (response.value);
+                var UV = String(currentUV);
+                currentTemp.append("<p>" + "UV Index: " + "<span>" + UV + "</span>" + "</p>").addClass("card-text");
+                
+                //console.log(UV);
+            // UV index coloring
+                if (currentUV <= 4) {
+                   $('span').addClass("low");
+                } else if (response.value <= 7) {
+                    $('span').addClass("normal");
+                } else if (response.value <= 10) {
+                    $('span').addClass("high");
+                }
+                }
+                
+            );
 
         });
 
