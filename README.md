@@ -1,8 +1,8 @@
 ### Weather_Forecast_App
 Week 6 Challenge
 
-* ['Weather-Dashboard - Github']()
-* ['Weather-Dashboard - Github IO']()
+* ['Weather-Dashboard - Github'](https://github.com/tajdinov/Weather_Forecast_App)
+* ['Weather-Dashboard - Github IO'](https://tajdinov.github.io/Weather_Forecast_App/)
 
 ![](assets/images/Screen1.png)
 ![](assets/images/Screen2.png)
