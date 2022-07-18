@@ -26,7 +26,7 @@ img {
   float: left;
   margin: 10px;
   border: 1px solid lightgray;
-
+  border-radius: 5%;
 }
 
 /* style for UV index */
@@ -42,5 +42,11 @@ img {
 
 .high {
   color: red;
+  font-size: larger;
+}
+
+.cityButton {
+  border: none;
+  background-color: white;
   font-size: larger;
 }
